@@ -5,5 +5,5 @@ cd $1
 echo $3 >> $2
 cd ..
 cd ..
-zsh ./push.sh
+zsh ./push.sh "Added folder -$1 and file $2"
 
