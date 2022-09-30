@@ -1,0 +1,2 @@
+echo "checking hooks"
+
