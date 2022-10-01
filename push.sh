@@ -3,7 +3,7 @@
  git add -A
  if [ "$#" -eq  "0" ]
    then
-     git commit -m "Changes"
+     git commit -m "Some Changes"
      git push origin main
      echo "No commit message has been passed"
  else
