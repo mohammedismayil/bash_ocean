@@ -1,7 +1,7 @@
 
  #!/bin/bash
 
-echo "commiting to past"
+echo "commiting to past--not worked"
  git add -A
  if [ "$#" -eq  "0" ]
    then
