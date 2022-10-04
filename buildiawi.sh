@@ -1,11 +1,13 @@
 #!/bin/bash
 
-echo "$(echo "hello $1")"
-job1="$(curl --location --request POST "https://upload.diawi.com/?token=$1&file" --form "file=@$2" --form "token=$1")"
-#result="$(curl --location -s --request GET 'https://upload.diawi.com/status?token=LOVzCmMH1mjTPi4Wv2dmwVAZ02LWqDLALo6HlVPtxm&job=CiDWEKJaZ7kmvQAWHR4OcCxJYEcGltYMvH1HyiGn80')"
+flutter build ipa --export-options-plist=exportOptions.plist
+job1="$(curl --http1.1 --location --request POST "https://upload.diawi.com/?token=$1&file" --form "file=@$(pwd)/build/ios/ipa/PayBit.ipa" --form "token=$1" | jq -r '.job')"
+sleep 6
+job2="$(curl --location -s --request GET "https://upload.diawi.com/status?token=$1&job=$job1" | jq -r '.link')"
 
-job2="$(curl --location --request POST "https://upload.diawi.com/?token=$1&file" --form "file=@$2" --form "token=$1")"
-
-echo "result: '$job1'"
-echo "result: '$job2'"
-
+flutter build apk
+job3="$(curl --http1.1 --location --request POST "https://upload.diawi.com/?token=$1&file" --form "file=@$(pwd)/build/app/outputs/flutter-apk/app-release.apk" --form "token=$1" | jq -r '.job')"
+sleep 6
+job4="$(curl --location -s --request GET "https://upload.diawi.com/status?token=$1&job=$job3" | jq -r '.link')"
+echo "iOS: '$job2'"
+echo "Android: '$job4'"
