@@ -1,0 +1,2 @@
+abcd
+cat level_12_train.txt | tr 'a' 'A'
