@@ -1,0 +1,6 @@
+#create the key and certificate
+openssl req -x509 -newkey rsa:2048 -keyout opensslsamplekey.pem -out opensslsamplecert.pem -days 365 -nodes
+#Run the openssl server
+openssl s_server -key opensslsamplekey.pem -cert opensslsamplecert.pem -accept 44330 -www
+#connect from openssl client
+openssl s_client -connect localhost:44330
