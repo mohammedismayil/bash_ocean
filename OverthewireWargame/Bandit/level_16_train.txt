@@ -4,3 +4,6 @@ openssl req -x509 -newkey rsa:2048 -keyout opensslsamplekey.pem -out opensslsamp
 openssl s_server -key opensslsamplekey.pem -cert opensslsamplecert.pem -accept 44330 -www
 #connect from openssl client
 openssl s_client -connect localhost:44330
+#Tried after closing openssl server
+#connect: Connection refused
+#connect:errno=61
