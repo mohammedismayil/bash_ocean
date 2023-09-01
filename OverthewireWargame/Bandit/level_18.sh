@@ -7,5 +7,5 @@ sort passwords.old passwords.new | uniq -u
 # glZreTEH1V3cGKL6g4conYqZqaEj0mte
 # hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
 cat passwords.new | grep glZreTEH1V3cGKL6g4conYqZqaEj0mte
-cat passwords.new | grep hga5tuuCLF6fFzUpnagiMN8ssu9LFrdgs
+cat passwords.new | grep hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
 #hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
