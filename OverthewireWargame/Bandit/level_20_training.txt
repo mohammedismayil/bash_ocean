@@ -1,0 +1,3 @@
+#Yayyyy-There is no place like home <3
+nano level_20_training.txt
+ls -l
