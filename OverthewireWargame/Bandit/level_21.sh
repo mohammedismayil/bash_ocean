@@ -6,5 +6,5 @@
 echo -n 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' | nc -l -p 1234 &
 #open in another new window
 ./suconnect 1234
-
-#VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+#It return back the next password in the first window
+#NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
