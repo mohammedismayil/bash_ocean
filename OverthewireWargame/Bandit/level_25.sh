@@ -9,9 +9,12 @@
 
 for i in {0000..9999}
 do
-        echo VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i >> possibilities.txt
+        echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i" >> possibilities.txt
 done
 
 cat possibilities.txt | nc localhost 30002 > result.txt
 
 #-->
+
+
+wc -l result.txt
