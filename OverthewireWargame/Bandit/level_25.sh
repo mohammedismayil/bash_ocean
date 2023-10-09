@@ -18,3 +18,8 @@ cat possibilities.txt | nc localhost 30002 > result.txt
 
 
 wc -l result.txt
+sort result.txt | grep -v "Wrong!"
+# Correct!
+# Exiting.
+# I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+# The password of user bandit25 is p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
